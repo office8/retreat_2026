@@ -1,9 +1,102 @@
+
+Claude가 응답을 완료했습니다
+바베큐 시간 표시를 추가할게요!
+
+
+명령 실행함, 파일 수정됨, 파일 읽음
+명령 실행함, 파일 수정됨, 파일 읽음
+바베큐에 120분 태그를 추가했어요! (11:00~13:00 기준)
+
+
+Retreat 2026
+코드 · HTML 
+스크롤 최소화를 위해 주제. 소요시간은 대 제목 옆에 표기
+
+
+Viewing timeline items to see current structure
+Viewing timeline items to see current structure
+태그를 제목 옆 인라인으로 옮기고, t-sub(부제목)도 한 줄로 압축할게요. 먼저 CSS에 인라인 태그 스타일을 추가하고, 각 항목을 수정할게요.
+
+
+Update t-label style to flex for inline tags, and add inline-tag style
+Update t-label style to flex for inline tags, and add inline-tag style
+Now update all timeline items to put tags inline in the label and sub-info on one line:
+
+
+파일 수정됨, 파일 읽음
+파일 수정됨, 파일 읽음
+주제·소요시간 태그를 제목 옆에 인라인으로 붙였어요! 이제 각 항목 높이가 줄어들어 스크롤이 훨씬 줄어들었어요.
+
+
+Retreat 2026
+코드 · HTML 
+준비물에서 세면도구, 핸드폰 충전기 제외
+
+
+2개 파일 수정됨, 명령 실행함, 파일 조회함
+2개 파일 수정됨, 명령 실행함, 파일 조회함
+세면도구와 핸드폰 충전기를 제거했어요! 준비물이 총 6개 항목으로 줄었어요.
+
+
+Retreat 2026
+코드 · HTML 
+준비물 탭을 삭제하자
+
+바로 삭제할게요!
+
+
+3개 파일 수정됨, 3개의 파일 조회함, 명령 2개 실행함
+3개 파일 수정됨, 3개의 파일 조회함, 명령 2개 실행함
+준비물 탭을 완전히 삭제했어요! 이제 탭 없이 일정만 바로 보이는 깔끔한 페이지가 됐어요. 탭 버튼도 하나만 남아 있어서 사실상 탭 바 자체도 없애도 될 것 같은데 어떻게 할까요?
+
+
+Retreat 2026
+코드 · HTML 
+2026 제1회 맛탕 사랑방 수련회로 타이틀 변경
+
+바로 변경할게요!
+
+
+명령 실행함, 파일 읽음
+명령 실행함, 파일 읽음
+**"2026 제1회 맛탕 사랑방 수련회"**로 타이틀 변경 완료했어요!
+
+
+Retreat 2026
+코드 · HTML 
+1783304013571_image.png
+삭제
+
+탭이 하나밖에 없으니 탭 바 전체를 삭제할게요!
+
+
+Remove entire date strip tab bar
+Remove entire date strip tab bar
+이제 tab-0도 그냥 항상 보이게 section active 클래스 유지하면 되니 JS switchTab도 필요 없어요. 정리할게요.
+
+
+파일 수정됨, 파일 읽음
+파일 수정됨, 파일 읽음
+탭 바 완전 삭제했어요! 이제 히어로 → D-Day 배너 → 일정 바로 보이는 구조로 깔끔해졌어요.
+
+
+Retreat 2026
+코드 · HTML 
+
+
+
+
+
+Claude는 AI이며 실수할 수 있습니다. 응답을 다시 한번 확인해 주세요.
+
+
+Retreat 2026 · HTML
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>2026 맛탕 사랑방 수련회</title>
+<title>2026 제1회 맛탕 사랑방 수련회</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -34,7 +127,7 @@
     margin: 0 auto;
     padding-bottom: 40px;
   }
-
+ 
   /* HERO */
   .hero {
     margin: 16px 16px 0;
@@ -63,7 +156,7 @@
     color: #fff; line-height: 1.35;
     word-break: keep-all;
   }
-
+ 
   /* D-DAY BANNER */
   .dday-banner {
     margin: 12px 16px 0;
@@ -86,7 +179,7 @@
     border-radius: 20px;
     white-space: nowrap;
   }
-
+ 
   /* DATE STRIP */
   .date-strip {
     margin: 14px 16px 0;
@@ -116,7 +209,7 @@
   .date-btn.active .db-day  { color: rgba(255,255,255,0.6); }
   .date-btn.active .db-num  { color: var(--gold); }
   .date-btn.active .db-tag  { background: rgba(212,168,67,0.2); color: var(--gold); }
-
+ 
   /* SECTIONS */
   .sections-wrap { padding: 16px; }
   .section { display: none; animation: fadeUp 0.25s ease; }
@@ -125,7 +218,7 @@
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: none; }
   }
-
+ 
   .sec-header {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: 14px;
@@ -137,7 +230,7 @@
     font-size: 11px; font-weight: 700;
     padding: 4px 12px; border-radius: 20px;
   }
-
+ 
   /* TIMELINE */
   .timeline-card {
     background: var(--white);
@@ -176,25 +269,27 @@
     background: var(--gold);
   }
   .t-body { flex: 1; padding-top: 1px; }
-  .t-label { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.4; }
-  .t-sub { font-size: 12px; color: var(--text-sub); margin-top: 3px; line-height: 1.5; }
+  .t-label {
+    font-size: 14px; font-weight: 700; color: var(--text);
+    display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+  }
+  .t-sub { font-size: 11px; color: var(--text-sub); margin-top: 2px; line-height: 1.5; }
   .t-tag {
     display: inline-block;
-    margin-top: 6px;
     background: var(--gold-light);
     color: var(--gold-deep);
-    font-size: 11px; font-weight: 700;
-    padding: 2px 9px;
-    border-radius: 7px;
+    font-size: 10px; font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 6px;
   }
   .t-emoji { font-size: 18px; margin-right: 4px; }
-
+ 
   /* highlight item (special block like worship / activity) */
   .t-item.highlight {
     background: var(--navy-light);
   }
   .t-item.highlight .t-time-main { color: var(--navy); }
-
+ 
   /* CHECKLIST */
   .checklist-progress {
     background: var(--navy-light);
@@ -274,280 +369,136 @@
 </style>
 </head>
 <body>
-
-
+ 
+ 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-label">2026 SUMMER RETREAT</div>
-  <div class="hero-title">2026 맛탕 사랑방 수련회</div>
+  <div class="hero-title">2026 제1회 맛탕 사랑방 수련회</div>
 </div>
-
+ 
 <!-- D-DAY -->
 <div class="dday-banner" id="dday-banner">
   <div class="dday-left">
     <div class="dday-label">수련회까지</div>
     <div class="dday-num" id="dday-num">D-0</div>
   </div>
-  <div class="dday-right">📍 교육관 2층 (초등부실)</div>
+  <div class="dday-right">📍 본당 (예배당)</div>
 </div>
-
-
-
-<!-- DATE STRIP -->
-<div class="date-strip">
-  <button class="date-btn active" onclick="switchTab(0)">
-    <span class="db-day">THU</span>
-    <span class="db-num">16</span>
-    <span class="db-tag">DAY 1</span>
-  </button>
-  <button class="date-btn" onclick="switchTab(1)">
-    <span class="db-day">FRI</span>
-    <span class="db-num">17</span>
-    <span class="db-tag">DAY 2</span>
-  </button>
-  <button class="date-btn" onclick="switchTab(2)">
-    <span class="db-day">CHECK</span>
-    <span class="db-num">✅</span>
-    <span class="db-tag">준비물</span>
-  </button>
-</div>
-
+ 
+ 
+ 
+ 
 <!-- SECTIONS -->
 <div class="sections-wrap">
-
-  <!-- DAY 1 -->
+ 
+  <!-- 일정 (DAY 1 + DAY 2 합친 탭) -->
   <div id="tab-0" class="section active">
+ 
     <div class="sec-header">
       <div class="sec-title">7월 16일 (목)</div>
       <div class="sec-badge">DAY 1</div>
     </div>
-
-    <div class="timeline-card">
+    <div class="timeline-card" style="margin-bottom:16px;">
       <div class="t-item highlight">
         <div class="t-time">
-          <div class="t-time-main">7:30</div>
-          <div class="t-time-sub">~ 8:10</div>
+          <div class="t-time-main">7:00</div>
+          <div class="t-time-sub">~ 7:30</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🎵</span>찬양</div>
+          <div class="t-label"><span class="t-emoji">🎵</span>찬양 <span class="t-tag">30분</span></div>
           <div class="t-sub">인도: 김예준</div>
         </div>
       </div>
-
       <div class="t-item">
         <div class="t-time">
-          <div class="t-time-main">8:10</div>
-          <div class="t-time-sub">~ 9:10</div>
+          <div class="t-time-main">7:30</div>
+          <div class="t-time-sub">~ 8:30</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">📖</span>말씀</div>
+          <div class="t-label"><span class="t-emoji">📖</span>말씀 <span class="t-tag">주제: 회복</span></div>
           <div class="t-sub">정주현 목사님</div>
-          <span class="t-tag">주제: 회복</span>
         </div>
       </div>
-
       <div class="t-item">
         <div class="t-time">
-          <div class="t-time-main">9:10</div>
-          <div class="t-time-sub">~ 9:40</div>
+          <div class="t-time-main">8:30</div>
+          <div class="t-time-sub">~ 9:00</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🙏</span>기도회</div>
+          <div class="t-label"><span class="t-emoji">🙏</span>기도회 <span class="t-tag">30분</span></div>
           <div class="t-sub">정주현 목사님</div>
         </div>
       </div>
-
       <div class="t-item">
         <div class="t-time">
-          <div class="t-time-main">9:50</div>
+          <div class="t-time-main">9:00</div>
+          <div class="t-time-sub">~ 10:30</div>
+        </div>
+        <div class="t-divider"></div>
+        <div class="t-body">
+          <div class="t-label"><span class="t-emoji">💬</span>사랑방 나눔 <span class="t-tag">90분</span></div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-time">
+          <div class="t-time-main">10:30</div>
           <div class="t-time-sub">~</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">💬</span>조별 나눔 후 취침 또는 귀가</div>
+          <div class="t-label"><span class="t-emoji">👋</span>자유롭게 귀가</div>
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- DAY 2 -->
-  <div id="tab-1" class="section">
+ 
     <div class="sec-header">
       <div class="sec-title">7월 17일 (금)</div>
       <div class="sec-badge">DAY 2</div>
     </div>
-
     <div class="timeline-card">
       <div class="t-item highlight">
         <div class="t-time">
-          <div class="t-time-main">6:00</div>
-          <div class="t-time-sub">~</div>
+          <div class="t-time-main">10:00</div>
+          <div class="t-time-sub">~ 11:30</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🌅</span>새벽 기도회</div>
-        </div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-time">
-          <div class="t-time-main">6:40</div>
-          <div class="t-time-sub">~ 8:20</div>
-        </div>
-        <div class="t-divider"></div>
-        <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🧴</span>세면 및 아침식사</div>
-        </div>
-      </div>
-
-      <div class="t-item">
-        <div class="t-time">
-          <div class="t-time-main">8:30</div>
-          <div class="t-time-sub">~ 9:20</div>
-        </div>
-        <div class="t-divider"></div>
-        <div class="t-body">
-          <div class="t-label"><span class="t-emoji">💬</span>말씀 나눔</div>
-          <div class="t-sub">새벽기도회 말씀 나눔</div>
-        </div>
-      </div>
-
-      <div class="t-item highlight">
-        <div class="t-time">
-          <div class="t-time-main">9:30</div>
-          <div class="t-time-sub">~ 11:00</div>
-        </div>
-        <div class="t-divider"></div>
-        <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🎉</span>레크리에이션</div>
+          <div class="t-label"><span class="t-emoji">🎉</span>레크리에이션 <span class="t-tag">90분</span></div>
           <div class="t-sub">진행: 박세명</div>
-          <span class="t-tag">90분</span>
         </div>
       </div>
-
       <div class="t-item">
         <div class="t-time">
-          <div class="t-time-main">11:00</div>
-          <div class="t-time-sub">~ 12:20</div>
+          <div class="t-time-main">11:30</div>
+          <div class="t-time-sub">~ 13:30</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">💦</span>물놀이</div>
+          <div class="t-label"><span class="t-emoji">🔥</span>바베큐 준비 및 식사 <span class="t-tag">120분</span></div>
         </div>
       </div>
-
       <div class="t-item">
         <div class="t-time">
-          <div class="t-time-main">12:20</div>
+          <div class="t-time-main">13:30</div>
           <div class="t-time-sub">~</div>
         </div>
         <div class="t-divider"></div>
         <div class="t-body">
-          <div class="t-label"><span class="t-emoji">🍱</span>점심 식사 후 귀가</div>
+          <div class="t-label"><span class="t-emoji">👋</span>자유롭게 귀가</div>
         </div>
       </div>
     </div>
+ 
   </div>
-
-  <!-- CHECKLIST -->
-  <div id="tab-2" class="section">
-    <div class="sec-header">
-      <div class="sec-title">준비물 체크리스트</div>
-      <div class="sec-badge">하나씩 탭하며 체크</div>
-    </div>
-
-    <div class="checklist-progress">
-      <div class="progress-bar-wrap">
-        <div class="progress-bar" id="progress-bar" style="width:0%"></div>
-      </div>
-      <div class="progress-text"><span id="check-count">0</span> / <span id="check-total">11</span> 완료</div>
-    </div>
-
-    <div class="timeline-card" style="padding:6px 16px;">
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">📖</div>
-        <span class="check-label">성경책</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">✏️</div>
-        <span class="check-label">필기도구 (노트, 펜)</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🙏</div>
-        <span class="check-label">기도제목 (미리 적어오기)</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🪥</div>
-        <span class="check-label">세면도구 (칫솔·치약·샴푸·바디워시 등)</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🛁</div>
-        <span class="check-label">물놀이 옷 · 수건 (여벌 포함)</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">👟</div>
-        <span class="check-label">편한 운동화 · 슬리퍼</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🧢</div>
-        <span class="check-label">모자 또는 양산 (자외선 대비)</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🧴</div>
-        <span class="check-label">자외선 차단제</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">💧</div>
-        <span class="check-label">물 또는 텀블러</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">💊</div>
-        <span class="check-label">개인 상비약</span>
-        <div class="check-box"></div>
-      </div>
-      <div class="checklist-item" onclick="toggleCheck(this)">
-        <div class="check-icon">🔌</div>
-        <span class="check-label">핸드폰 충전기</span>
-        <div class="check-box"></div>
-      </div>
-    </div>
-  </div>
-
+ 
+ 
 </div>
-
+ 
 <script>
-  function switchTab(idx) {
-    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + idx).classList.add('active');
-    document.querySelectorAll('.date-btn')[idx].classList.add('active');
-  }
-
-  function toggleCheck(item) {
-    item.classList.toggle('checked');
-    item.querySelector('.check-box').textContent = item.classList.contains('checked') ? '✓' : '';
-    updateProgress();
-  }
-  function updateProgress() {
-    const total = document.querySelectorAll('.checklist-item').length;
-    const done = document.querySelectorAll('.checklist-item.checked').length;
-    document.getElementById('check-count').textContent = done;
-    document.getElementById('check-total').textContent = total;
-    document.getElementById('progress-bar').style.width = (done/total*100) + '%';
-  }
-
   /* ===== D-DAY ===== */
   function updateDDay() {
     const target = new Date('2026-07-16T00:00:00');
@@ -567,3 +518,4 @@
 </script>
 </body>
 </html>
+ 
